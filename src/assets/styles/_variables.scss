@@ -1,0 +1,197 @@
+@import './src/assets/styles/_fonts.scss';
+@import './src/assets/styles/mixins/_breakpoints.scss';
+
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+$enable-important-utilities: true;
+
+// Prefix for :root CSS variables
+$variable-prefix:             yi-;
+
+// Color system
+
+$white:     #fff;
+$black:     #000;
+
+$yellow:    #FFFB1F;
+$blue:      #4040FF;
+$red:       #FF3D00;
+
+$gray:      #F5F5F7;
+$gray-dark: #A6A6A6;
+$gray-darker: #656565;
+
+$colors: (
+  "white":      $white,
+  "black":      $black,
+
+  "yellow":     $yellow,
+  "blue":       $blue,
+  "red":        $red,
+
+  "gray":       $gray,
+  "gray-dark":  $gray-dark
+);
+
+
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (
+  ("<", "%3c"),
+  (">", "%3e"),
+  ("#", "%23"),
+  ("(", "%28"),
+  (")", "%29"),
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $white;
+$body-color:                $black;
+$body-text-align:           left;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                $black;
+$link-decoration:           none;
+$link-hover-color:          $blue;
+$link-hover-decoration:     null;
+
+
+// Paragraphs
+//
+// Style p element.
+$paragraph-margin-bottom:   15px;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 480px,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1628px
+);
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12;
+$grid-gutter-width:           20px;
+$grid-row-columns:            6;
+
+// Container padding
+$container-padding-x: $grid-gutter-width;
+
+
+// scss-docs-start border-radius-variables
+$border-radius:               6px;
+$border-radius-pill:          999px;
+// scss-docs-end border-radius-variables
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// scss-docs-start font-variables
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+// stylelint-enable value-keyword-case
+$font-family-base:            var(--#{$variable-prefix}font-sans-serif);
+$font-family-code:            var(--#{$variable-prefix}font-monospace);
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-root:              null;
+$font-size-base:              14px; // Assumes the browser default, typically `16px`
+
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+
+$font-weight-base:            $font-weight-normal;
+
+$line-height-base:            1.333;
+
+$h1-font-size:                24px;
+$h2-font-size:                24px;
+$h3-font-size:                24px;
+$h4-font-size:                14px;
+$h5-font-size:                14px;
+$h6-font-size:                14px;
+
+$negative-letter-spacing:     -0.62px;
+// scss-docs-end font-variables
+
+// scss-docs-start headings-variables
+$headings-margin-bottom:      60px;
+$headings-font-family:        null;
+$headings-font-style:         null;
+$headings-font-weight:        700;
+$headings-line-height:        1.25;
+$headings-color:              null;
+// scss-docs-end headings-variables
+
+// scss-docs-start type-variables
+$lead-font-size:              18px;
+$lead-font-weight:            700;
+
+$small-font-size:             12px;
+
+$sub-sup-font-size:           10px;
+
+$text-muted:                  $gray;
+
+$hr-margin-y:                 20px;
+$hr-color:                    inherit;
+$hr-height:                   1px;
+$hr-opacity:                  .25;
+
+$legend-margin-bottom:        .5rem;
+$legend-font-size:            1.5rem;
+$legend-font-weight:          null;
+
+$mark-padding:                .2em;
+
+$dt-font-weight:              $font-weight-bold;
+
+$nested-kbd-font-weight:      $font-weight-bold;
+
+$list-inline-padding:         .5rem;
+
+$mark-bg:                     #fcf8e3;
+// scss-docs-end type-variables
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+// scss-docs-start table-variables
+$table-cell-padding-y:        .5rem;
+$table-cell-padding-x:        .5rem;
+$table-cell-padding-y-sm:     .25rem;
+$table-cell-padding-x-sm:     .25rem;
+
+$table-cell-vertical-align:   top;
+
+$table-color:                 $body-color;
+$table-bg:                    transparent;
+$table-accent-bg:             transparent;
+
+$table-th-font-weight:        null;
+// scss-docs-end table-loop
